@@ -1,9 +1,9 @@
-## MapReduce in Python
+# MapReduce in Python
 
 ![MapReduce](http://wi-wiki.de/lib/exe/fetch.php?media=bigdata:mapreducewordcountoverview1.png)
 Source: http://wi-wiki.de  
 
-# mapper.py  
+## mapper.py  
 ```
 #!/usr/bin/env python 
 import sys 
@@ -19,7 +19,7 @@ for item in keys:
   print( '%s\t%s' % (item, value) )  #Output with tabs
 ```
 
-# reducer.py
+## reducer.py
 ```
 #!/usr/bin/env python
 import sys
