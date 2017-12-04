@@ -42,7 +42,7 @@ for line in sys.stdin:
         print( '%s\t%s' % (last_key, running_total) ) #Output 
  ```
  
- Terminal-commands in Cloudera:
+ ## Terminal-commands in Cloudera:
 ```
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \ 
 -input /user/cloudera/map_reduce_input \ #Input file
