@@ -41,6 +41,21 @@ for line in sys.stdin:
         running_total = value
         print( '%s\t%s' % (last_key, running_total) ) #Output 
  ```
+ 
+ Terminal-commands in Cloudera:
+```
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \ 
+-input /user/cloudera/map_reduce_input \ #Input file
+-output /user/cloudera/map_reduce_output \ #Output file
+-mapper /home/cloudera/fh_wn/week2/wc_mapper.py \ #run Mapper.py File
+-reducer /home/cloudera/fh_wn/week2/wc_reducer.py \ #run Reducer.py File 
+-file /home/cloudera/fh_wn/week2/wc_mapper.py \ #Mapper.py Repo
+-file /home/cloudera/fh_wn/week2/wc_reducer.py  #Reducer.py Repo
+```  
+Last step  
+```
+cat *.txt | ./wc_mapper.py | sort | ./wc_reducer.py
+```  
 Code example:
 http://www.science.smith.edu/dftwiki/index.php/Hadoop_Tutorial_2_--_Running_WordCount_in_Python
 
